@@ -19,7 +19,7 @@ fi
 git commit -m "$msg"
 
 # Push source and build repos.
-git@retrofocus push origin master
+git push origin master
 
 # Come back
 cd ..
@@ -35,5 +35,4 @@ fi
 git commit -m "$msg"
 
 # Push source and build repos.
-git@retrofocus push origin mastera
-
+git push origin master
