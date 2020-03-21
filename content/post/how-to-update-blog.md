@@ -28,5 +28,24 @@ image:
 projects: []
 ---
 
+Just note to self.
+
+
 1. hugo new post/title.md
-2. 
+2. ./deploy.sh
+
+When private email warning appears, make sure to check your email is not private:
+```
+git config --local user.email
+```
+
+If you've committed with your private email, change history by
+```
+git filter-branch -f --env-filter "GIT_AUTHOR_NAME='yourname'; GIT_AUTHOR_EMAIL='9999+userid@users.noreply.github.com'; GIT_COMMITTER_NAME='yourname'; GIT_COMMITTER_EMAIL='9999+userid@users.noreply.github.com';" HEAD
+```
+
+'yourname' is checked by 'git log' command. '999+userid' can be found in your github setting.
+
+### reference
+https://www.d-wood.com/blog/2019/05/24_11229.html
+
